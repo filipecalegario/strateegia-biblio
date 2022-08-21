@@ -9,9 +9,15 @@ export default function ProjectList({ handleSelectChange }) {
     async function fetchProjectList() {
       try {
         const accessToken = localStorage.getItem('accessToken');
-        const projectList = await api.getAllProjects(accessToken);
+        const projectList_ = await api.getAllProjects(accessToken);
         // console.log('projectList: %o', projectList);
-        setProjectList(projectList);
+        const simplifiedProjectList = projectList_.map(lab => {
+          return lab.projects.map(project => {
+            return {title: `${lab.lab.name ? lab.lab.name : 'public'} - ${project.title}`, id: project.id}
+              ;
+          });
+        })
+        setProjectList(simplifiedProjectList);
       } catch (error) {
         console.log(error);
       }
