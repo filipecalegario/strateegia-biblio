@@ -18,6 +18,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import strateegiaLogo from "../assets/strateegia_logo.png";
 import { useNavigate } from "react-router-dom";
 import { MAIN_COLOR, SECOND_COLOR, TITLE } from "../components/defaults";
+import { css } from "@emotion/react";
 
 export default function SimpleSidebar({ sideBarItems, children, handleClick }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -28,6 +29,17 @@ export default function SimpleSidebar({ sideBarItems, children, handleClick }) {
         sideBarItems={sideBarItems}
         handleClick={handleClick}
         display={{ base: "none", md: "block" }}
+        css={css({ overflowY: "scroll" })}
+        sx={{
+          '&::-webkit-scrollbar': {
+            width: '16px',
+            borderRadius: '8px',
+            backgroundColor: `rgba(0, 0, 0, 0.05)`,
+          },
+          '&::-webkit-scrollbar-thumb': {
+            backgroundColor: `rgba(0, 0, 0, 0.1)`,
+          },
+        }}
       />
       <Drawer
         autoFocus={false}
