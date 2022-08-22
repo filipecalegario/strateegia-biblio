@@ -164,7 +164,7 @@ const MobileNav = ({ onOpen, ...rest }) => {
       />
       <Flex ml="20px">
         <Text color="black" fontSize="2xl" as="span" fontWeight={"600"}>
-          flow
+          {TITLE}
         </Text>
         <Text color="black" fontSize="2xl">
           .strateegia
