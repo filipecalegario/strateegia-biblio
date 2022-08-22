@@ -18,7 +18,6 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { MAIN_COLOR, SECOND_COLOR, TITLE } from "../components/defaults";
 
-
 export default function Signin() {
   const navigate = useNavigate();
 
@@ -112,7 +111,7 @@ export default function Signin() {
                   bg={"white"}
                   color={MAIN_COLOR}
                   _hover={{
-                    bg: "red",
+                    bg: "#A63366",
                     color: "white",
                   }}
                   type="submit"
