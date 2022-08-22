@@ -168,6 +168,8 @@ export default function Main() {
                   return (
                     <>
                       <Text as="h1" fontSize="xl" mt="20px" mb={3}>
+                        mapa: <strong>{divPoint.map_title}</strong>
+                        {" | "}
                         ponto de divergência:{" "}
                         <strong>{divPoint.tool.title}</strong>
                         <Box
