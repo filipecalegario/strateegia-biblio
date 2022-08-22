@@ -178,7 +178,9 @@ export default function Main() {
                           borderColor={MAIN_COLOR}
                         />
                       </Text>
-                      {divPoint.tool.references ? "===== REFs =====" : null}
+                      {divPoint.tool.references.length
+                        ? "===== REFs ====="
+                        : null}
                       {divPoint.tool.references.map((ref) => {
                         return (
                           <Link href={ref.url} isExternal>
