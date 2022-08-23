@@ -180,9 +180,9 @@ export default function Main() {
                           borderColor={MAIN_COLOR}
                         />
                       </Text>
-                      {divPoint.tool.references.length
+                      {/* {divPoint.tool.references.length
                         ? "===== REFs ====="
-                        : null}
+                        : null} */}
                       {divPoint.tool.references.map((ref) => {
                         return (
                           <Link href={ref.url} isExternal>
@@ -192,9 +192,9 @@ export default function Main() {
                           </Link>
                         );
                       })}
-                      {divPoint.attached_links.length
+                      {/* {divPoint.attached_links.length
                         ? "===== LINKS ====="
-                        : null}
+                        : null} */}
                       {divPoint.attached_links.map((link) => {
                         return (
                           <Link href={link.url} isExternal>
